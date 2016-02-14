@@ -18,3 +18,26 @@ Yoga 3 Pro@LENOVO-PC /C/Users/Yoga 3 Pro/My programs/exadel/ForExadel (master)
 $ git status
 On branch master
 nothing to commit, working directory clean
+
+
+
+Yoga 3 Pro@LENOVO-PC /C/Users/Yoga 3 Pro/My programs/exadel/ForExadel2/chat-educ
+ational-practice (master)
+$ git log
+commit ba59f401ef8af39e0c986afa630e59442db3cf1f
+Author: Lada051995 <mladda@mail.ru>
+Date:   Sun Feb 14 13:10:14 2016 +0200
+
+    Add log.txt
+
+commit fa8e3f2a9891eb948efa2f86e8dd44dd84b6fb6e
+Author: Lada051995 <mladda@mail.ru>
+Date:   Sun Feb 14 13:08:23 2016 +0200
+
+    Add status.txt
+
+commit 39c95985707bfbd83eb0d477e3b26987f00160e5
+Author: Lada051995 <mladda@mail.ru>
+Date:   Sun Feb 14 13:05:57 2016 +0200
+
+    Add .gitignore
