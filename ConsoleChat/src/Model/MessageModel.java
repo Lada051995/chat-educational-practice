@@ -1,9 +1,13 @@
-package Model;
+package model;
 
 
+/**
+ * Created by Dell on 15.02.2016.
+ */
 public class MessageModel {
     private long id;
     private String author;
+    private long timestamp;
     private String message;
 
     public long getId() {
@@ -30,11 +34,19 @@ public class MessageModel {
         this.message = message;
     }
 
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
-        return "MessageModel{" +
-                "id=" + id +
+        return "{id=" + id +
                 ", author='" + author + '\'' +
+                ", timestamp=" + timestamp +
                 ", message='" + message + '\'' +
                 '}';
     }
