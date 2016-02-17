@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        MessageService messageService = new MessageServiceImpl("C:\\Users\\Dell\\IdeaProjects\\ConsoleChat\\src\\input", "C:\\Users\\Dell\\IdeaProjects\\ConsoleChat\\src\\output");
+        MessageService messageService = new MessageServiceImpl("C:\\Users\\Yoga 3 Pro\\My programs\\exadel\\ForExadel\\ConsoleChat\\src\\input", "C:\\Users\\Yoga 3 Pro\\My programs\\exadel\\ForExadel\\ConsoleChat\\src\\output");
         messageService.readAndSaveAllMessageFromFile();
 
         Scanner input = new Scanner(System.in);
