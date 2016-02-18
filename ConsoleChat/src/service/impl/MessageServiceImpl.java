@@ -9,11 +9,11 @@ import service.MessageService;
 import java.io.*;
 import java.util.Comparator;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-/**
- * Created by Dell on 15.02.2016.
- */
+
 public class MessageServiceImpl implements MessageService {
 
     private long currentId;
@@ -33,24 +33,24 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void delete(long id) {
-        List<MessageModel> messageModelList = this.readAllMessageFromFile();
+        List<MessageModel> messageModelList = this.readAllMessageFromFile(this.pathWrite);
 
         List<MessageModel> newMessageModelList = messageModelList.parallelStream().filter(messageModel -> messageModel.getId() != id).collect(Collectors.toList());
-        this.saveAllMessageToFile(newMessageModelList);
+        this.saveAllMessageToFile(newMessageModelList, this.pathWrite);
 
     }
 
     @Override
     public void readAndSaveAllMessageFromFile() {
-            List<MessageModel> messageModelList = this.readAllMessageFromFile();
-            this.saveAllMessageToFile(messageModelList);
+            List<MessageModel> messageModelList = this.readAllMessageFromFile(this.pathRead);
+            this.saveAllMessageToFile(messageModelList, this.pathWrite);
 
             this.currentId = messageModelList.size();
     }
 
     @Override
-    public void saveAllMessageToFile(List<MessageModel> messageList) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(pathWrite)))) {
+    public void saveAllMessageToFile(List<MessageModel> messageList, String path) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(path)))) {
             bufferedWriter.write("[");
 
             for(int i = 0; i<messageList.size()-1; i++) {
@@ -67,7 +67,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void showAllMessageSortByTime() {
-        List<MessageModel> messageModelList = this.readAllMessageFromFile();
+        List<MessageModel> messageModelList = this.readAllMessageFromFile(this.pathWrite);
 
         List<MessageModel> sortedMessageList = messageModelList.parallelStream().sorted(new Comparator<MessageModel>() {
             @Override
@@ -79,10 +79,11 @@ public class MessageServiceImpl implements MessageService {
         sortedMessageList.forEach(System.out::println);
     }
 
-    public List<MessageModel> readAllMessageFromFile() {
+    @Override
+    public List<MessageModel> readAllMessageFromFile(String path) {
         List<MessageModel> messageModelList = null;
 
-        try (Reader reader = new InputStreamReader(new FileInputStream(pathRead))) {
+        try (Reader reader = new InputStreamReader(new FileInputStream(path))) {
 
             Gson gson = new GsonBuilder().create();
             messageModelList = gson.fromJson(reader, new TypeToken<List<MessageModel>>() {
@@ -96,15 +97,30 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
+    public List<MessageModel> findMessageListByAuthor(String author) {
+        return this.readAllMessageFromFile( this.pathWrite ).stream().filter(messageModel -> messageModel.getAuthor().equals(author)).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<MessageModel> findMessageListByText(String text) {
+        return this.readAllMessageFromFile( this.pathWrite ).stream().filter(messageModel -> messageModel.getMessage().equals(text)).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<MessageModel> findMessageListByRegularExpression(String expression) {
+        return this.readAllMessageFromFile( this.pathWrite ).stream().filter(messageModel -> messageModel.getMessage().matches(expression) ).collect(Collectors.toList());
+    }
+
+    @Override
     public long getIdForNewMessage() {
         return ++currentId;
     }
 
     @Override
     public void save(MessageModel messageModel) {
-        List<MessageModel> messageModelList = this.readAllMessageFromFile();
+        List<MessageModel> messageModelList = this.readAllMessageFromFile(this.pathWrite);
         messageModelList.add(messageModel);
 
-        this.saveAllMessageToFile(messageModelList);
+        this.saveAllMessageToFile(messageModelList, this.pathWrite);
     }
 }

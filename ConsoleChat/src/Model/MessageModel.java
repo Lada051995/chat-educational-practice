@@ -1,9 +1,6 @@
 package model;
 
 
-/**
- * Created by Dell on 15.02.2016.
- */
 public class MessageModel {
     private long id;
     private String author;
