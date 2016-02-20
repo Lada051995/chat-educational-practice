@@ -3,14 +3,16 @@ import service.MessageService;
 import service.impl.MessageServiceImpl;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
+import java.util.Locale;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+class Main {
+    public static void main(String[] args) throws IOException, ParseException {
         MessageService messageService = new MessageServiceImpl("C:\\Users\\Yoga 3 Pro\\My programs\\exadel\\ForExadel\\ConsoleChat\\src\\input", "C:\\Users\\Yoga 3 Pro\\My programs\\exadel\\ForExadel\\ConsoleChat\\src\\output");
         messageService.readAndSaveAllMessageFromFile();
 
@@ -23,6 +25,7 @@ public class Main {
             System.out.println("enter 4 for find messages by name");
             System.out.println("enter 5 for find messages by text");
             System.out.println("enter 6 for find using regular expression");
+            System.out.println("enter 7 for find messages between dates");
 
             int choose = Integer.parseInt(bufferedReader.readLine());
 
@@ -76,6 +79,20 @@ public class Main {
                     System.out.print("enter regular expression : ");
                     String expression = bufferedReader.readLine();
                     messageService.findMessageListByRegularExpression(expression).forEach(System.out::println);
+                    break;
+                }
+
+                case 7: {
+                    System.out.println("MMM d, yyyy");
+                    DateFormat format = new SimpleDateFormat( "MMM d, yyyy", Locale.ENGLISH );
+
+                    System.out.print("enter start date : ");
+                    Date start  = format.parse(bufferedReader.readLine());
+
+                    System.out.print("enter end date : ");
+                    Date end  = format.parse(bufferedReader.readLine());
+
+                    messageService.findMessageListBetweenDates(start, end).forEach(System.out::println);
                     break;
                 }
             }

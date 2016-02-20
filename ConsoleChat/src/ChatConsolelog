@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2016-02-20T16:31:00</date>
+  <millis>1455978660725</millis>
+  <sequence>0</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAndSaveAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:00</date>
+  <millis>1455978660833</millis>
+  <sequence>1</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:01</date>
+  <millis>1455978661091</millis>
+  <sequence>2</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:01</date>
+  <millis>1455978661094</millis>
+  <sequence>3</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>saveAllMessageToFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:01</date>
+  <millis>1455978661102</millis>
+  <sequence>4</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>saveAllMessageToFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:01</date>
+  <millis>1455978661105</millis>
+  <sequence>5</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAndSaveAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:05</date>
+  <millis>1455978665661</millis>
+  <sequence>6</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>showAllMessageSortByTime</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:05</date>
+  <millis>1455978665664</millis>
+  <sequence>7</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:05</date>
+  <millis>1455978665669</millis>
+  <sequence>8</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:05</date>
+  <millis>1455978665883</millis>
+  <sequence>9</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>showAllMessageSortByTime</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:18</date>
+  <millis>1455978678733</millis>
+  <sequence>10</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>save</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:18</date>
+  <millis>1455978678735</millis>
+  <sequence>11</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:18</date>
+  <millis>1455978678740</millis>
+  <sequence>12</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:18</date>
+  <millis>1455978678742</millis>
+  <sequence>13</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>saveAllMessageToFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:18</date>
+  <millis>1455978678745</millis>
+  <sequence>14</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>saveAllMessageToFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:18</date>
+  <millis>1455978678748</millis>
+  <sequence>15</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>save</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:20</date>
+  <millis>1455978680466</millis>
+  <sequence>16</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>showAllMessageSortByTime</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:20</date>
+  <millis>1455978680474</millis>
+  <sequence>17</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:20</date>
+  <millis>1455978680478</millis>
+  <sequence>18</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:20</date>
+  <millis>1455978680480</millis>
+  <sequence>19</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>showAllMessageSortByTime</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:52</date>
+  <millis>1455978712839</millis>
+  <sequence>20</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>showAllMessageSortByTime</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:52</date>
+  <millis>1455978712842</millis>
+  <sequence>21</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>start</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:52</date>
+  <millis>1455978712855</millis>
+  <sequence>22</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>readAllMessageFromFile</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+<record>
+  <date>2016-02-20T16:31:52</date>
+  <millis>1455978712858</millis>
+  <sequence>23</sequence>
+  <logger>console</logger>
+  <level>INFO</level>
+  <class>MessageServiceImpl</class>
+  <method>showAllMessageSortByTime</method>
+  <thread>1</thread>
+  <message>end</message>
+</record>
+</log>

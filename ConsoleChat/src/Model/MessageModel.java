@@ -1,6 +1,7 @@
 package model;
 
 
+
 public class MessageModel {
     private long id;
     private String author;
