@@ -28,7 +28,6 @@ img {
     min-height :100%;
 }
 
-#headerRow,
 #center {
     height: 100%;
 }
@@ -37,9 +36,13 @@ img {
     border-radius:6px 6px 0 0;
     background-color: blueviolet;
     position: fixed;
+    clear: both;
     left: 0;
     right: 0;
     bottom: 0;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    width: 97%;
 }
 
 
@@ -137,6 +140,10 @@ img {
     #center {
         float: left;
         margin: 0 50% 0 0;
+    }
+
+    #rename {
+        margin-top: 15%;
     }
 
     .input-group {
