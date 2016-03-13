@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel='stylesheet' href='bootstrap/css/bootstrap.min.css' type='text/css'>
     <link href="style.css" rel="stylesheet">
+    <script src="scripts.js"></script>
     <!--<link rel='stylesheet' href='bootstrap/js/bootstrap.min.js' type='js'>-->
 </head>
-<body >
+<body onload="run();">
 <div class="container-fluid" id="container">
     <div class="row-fluid" id="header">
         <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4" id="headerRowLeft">
-            <button class="btn btn-success" type="button" id="buttonOnOff">On</button>
+            <input type = "submit" value = "ON" class = "btn btn-success" id="buttonOnOff">
         </div>
         <div class="col-sm-8 col-md-4 col-lg-4 col-xs-8" id="headerRowCenter">
             <h1><em><strong>CHATTING ROOM</strong></em></h1>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xs-12" id="headerRowRight">
             <div class="col-lg-6">
-                <div class="input-group" id="rename">
-                    <input type="text" class="form-control">
+                <div class="input-group" id="renameGroup">
+                    <input type="text" class="form-control" id="areaRename">
                      <span class="input-group-btn">
-                           <button class="btn btn-default" type="button">Rename</button>
+                           <button class="btn btn-default" type="button" id="rename">Rename</button>
                      </span>
                 </div>
             </div>
@@ -32,24 +33,14 @@
             <textarea class="form-control" readonly="readonly" rows=1 id="nameSurname">MLADA IHNATOVICH</textarea>
             <br>
             <select size="12" class="form-control" id="sel1" multiple="multiple">
-                <option>Mlada: Hello!</option>
-                <option>Anton: Hello</option>
-                <option>Mlada: My name is Mlada.</option>
-                <option>Anton: My name is Anton.</option>
-                <option>Mlada: How are you?</option>
-                <option>Anton: Fine.</option>
-                <option>Anton: And you?</option>
-                <option>Mlada: Fine, thanks.</option>
-                <option>Anton: What are you doing now?</option>
-                <option>Mlada: I am writing to you :)</option>
-                <option>Mlada: And what about you?</option>
+
             </select>
             <textarea class="form-control" rows=2 id="myTextArea"></textarea>
             <!--<input class="btn-purple" type="button" value="Send">-->
             <div class="btn-group">
-                <button type="button" class="btn btn-default">Send</button>
+                <button type="button" class="btn btn-default" id="send">Send</button>
                 <button type="button" class="btn btn-default">Change</button>
-                <button type="button" class="btn btn-default">Delete</button>
+                <button type="button" class="btn btn-default" id="delete">Delete</button>
             </div>
         </div>
     </div>
