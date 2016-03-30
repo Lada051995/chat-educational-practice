@@ -1,0 +1,11 @@
+GET http://localhost:999/chat?token=TN19EN HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:999
+
+
+HTTP/1.1 200 OK
+Date: Sun, 27 Mar 2016 09:24:06 GMT
+Access-control-allow-origin: *
+Content-length: 47
+
+{"messages":["how are you ?"],"token":"TN27EN"}
